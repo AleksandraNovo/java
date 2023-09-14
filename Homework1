@@ -17,22 +17,12 @@ public class Homework1 {
 
     // task 1
     static void convert(int arg) {
-        if (arg >= 0) {
             String a = Integer.toString(arg, 2);
             String b = Integer.toString(arg, 8);
             String c = Integer.toString(arg, 16);
             System.out.println(a);
             System.out.println(b);
             System.out.println(c);
-        }else{
-            int n = -arg;
-            String a = Integer.toString(arg, 2);
-            String b = Integer.toString(arg, 8);
-            String c = Integer.toString(arg, 16);
-            System.out.println(a);
-            System.out.println(b);
-            System.out.println(c);
-        }
     }
 
 
@@ -50,8 +40,7 @@ public class Homework1 {
     static int max(int x, int y, int z) {
         int n = Math.max(x, y);
         n = Math.max(n, z);
-        System.out.println(n);
-        return 0;
+        return n;
     }
 
 
@@ -78,7 +67,7 @@ public class Homework1 {
         for (int i = 0; i <= 10; i++){
             for (int j = 0; j <= 10; j++){
                 int p = i * j;
-                System.out.println(i+"*"+j+"="+p);
+                System.out.println(i + "*" + j + "=" + p);
             }
         }
     }
@@ -86,15 +75,19 @@ public class Homework1 {
 
     // task 7
     static int average(int... nums) {
-        return Arrays.stream(nums).sum()/nums.length;
-        return 0;
+        int sum = 0;
+        for (int i: nums){
+            sum += i;
+        }
+        return (sum/nums.length);
     }
 
 
     // task 8
     static boolean isMagicSquare(int[][] square) {
         int len = square[0].length;
-        int d1 = 0, d2 = 0;
+        int d1 = 0
+        int d2 = 0;
         for (int i = 0; i < len; i++){
             d1 += square[i][i];
             d2 += square[i][len- i - 1];
@@ -103,7 +96,8 @@ public class Homework1 {
             return false;
         }
         for (int i = 0; i < len; i++){
-            int str = 0, stl = 0;
+            int str = 0
+            int stl = 0;
             for (int j = 0; j < len; j++){
                 str += square[i][j];
                 stl += square[j][i];
@@ -118,9 +112,11 @@ public class Homework1 {
 
     // task 9
     static int[] reverse(int[] arr) {
-        for(int i = arr.length - 1; i >= 0; i--){
-            System.out.println(arr[i]);
+        int[] reverse_arr = new int[arr.length];
+        for (int i = 0; i < arr.length; ++i) {
+            reverse_arr[i] = arr[arr.length - i - 1];
         }
+        return reverse_arr;
     }
 
 
@@ -135,16 +131,25 @@ public class Homework1 {
                 }
             }
         }
-        for (int t: arr){
-            System.out.println(t);
-        }
-        return null;
+        return arr;
     }
 
 
     // task 11
     static int[] removeExtra(int[] arr, int n) {
-        return Arrays.stream(arr).filter(i -> i != n).toArray();
-        return null;
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < arr.length; ++i) {
+            x += (arr[i] == n) ? 1 : 0;
+        }
+        int[] array = new int[arr.length - x];
+
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] != n) {
+                array[y] = arr[i];
+                y++;
+            }
+        }
+        return array;
     }
 }
