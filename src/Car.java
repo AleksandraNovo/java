@@ -18,11 +18,11 @@ public class Car {
     }
 
     private class Engine {
-        private boolean Run;
+        private boolean RunOrNot;
         private final int consumption;
 
         public Engine(int consumption) {
-            this.Run = false;
+            this.RunOrNot = false;
             this.consumption = consumption;
         }
         public void refuel() {
@@ -30,7 +30,7 @@ public class Car {
             System.out.println("Refueled maximum");
         }
         public void stop() {
-            Run = false;
+            RunOrNot = false;
             System.out.println("Stop");
         }
 
@@ -38,13 +38,13 @@ public class Car {
             if (fuel <= 0) {
                 System.out.println("Can't run");
             } else {
-                Run = true;
+                RunOrNot = true;
                 System.out.println("Is running");
             }
         }
 
         public boolean move() {
-            if (Run) {
+            if (RunOrNot) {
                 if (fuel >= consumption) {
                     fuel -= consumption;
                     mileage += 100;
@@ -65,11 +65,16 @@ public class Car {
     }
 
     public void info() {
-        System.out.println("Model: " + model);
-        System.out.println("Colour: " + colour);
-        System.out.println("Fuel left: " + fuel);
-        System.out.println("Mileage: " + mileage);
-        System.out.println("Engine is " + (engine.Run ? "running" : "stopped"));
+        System.out.println("Model " + model);
+        System.out.println("Colour " + colour);
+        System.out.println("Fuel left " + fuel);
+        System.out.println("Mileage " + mileage);
+        if (engine.RunOrNot){
+            System.out.println("Engine is running");
+        }else{
+            System.out.println("Engine is stopped");
+        }
+
     }
     public void startEngine() {
         engine.start();
