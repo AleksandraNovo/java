@@ -5,49 +5,45 @@ import java.util.Objects;
 public class IntHolder {
     private int value;
 
-    // Конструктор
-    public IntHolder(int value1) {
-        this.value = value1;
+    public IntHolder(int valueIntHolder) {
+        this.value = valueIntHolder;
     }
 
-    // Статический метод инициализации
-    public static IntHolder valueOf(int value) {
-        return new IntHolder(value);
+    public static IntHolder valueOf(int valueIntHolder) {
+        return new IntHolder(valueIntHolder);
     }
 
     // Методы для арифметических операций
-    public IntHolder add(IntHolder other) {
+    public IntHolder addition(IntHolder other) {
         return new IntHolder(this.value + other.value);
     }
 
-    public IntHolder subtract(IntHolder other) {
+    public IntHolder subtraction(IntHolder other) {
         return new IntHolder(this.value - other.value);
     }
-
-    public IntHolder multiply(IntHolder other) {
-        return new IntHolder(this.value * other.value);
-    }
-
-    public IntHolder divide(IntHolder other) {
-        if (other.value == 0) {
-            throw new ArithmeticException("Division by zero");
+    /*public IntHolder division(IntHolder other) {
+        if (other.value != 0) {
+            return new IntHolder(this.value / other.value);
         }
-        return new IntHolder(this.value / other.value);
+        return ("Error");
+    }*/
+    public IntHolder multiplication(IntHolder other) {
+        return new IntHolder(this.value * other.value);
     }
 
     public IntHolder remainder(IntHolder other) {
         return new IntHolder(this.value % other.value);
     }
 
-    // Метод для обмена значениями двух объектов
-    public void swap(IntHolder j) {
-        int temp = this.value;
-        this.value = j.value;
-        j.value = temp;
+    public void swap(IntHolder i) {
+        int swap1 = this.value;
+        this.value = i.value;
+
+        i.value = swap1;
     }
 
-    @Override
-    public String toString() {
+
+    public String toString1() {
         return String.valueOf(value);
     }
 

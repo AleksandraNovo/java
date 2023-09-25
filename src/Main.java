@@ -17,7 +17,9 @@ public class Main {
         car.startEngine();
         car.move();
         car.info();
+
     }
+    /*
     public static void convert(int arg) {
         //if (arg >= 0) {
         String a = Integer.toString(arg, 2);
@@ -34,7 +36,7 @@ public class Main {
             System.out.println(a);
             System.out.println(b);
             System.out.println(c);
-        }*/
+        }
     }
     static int normalize(int angle) {
         int n = angle % 360;
@@ -137,5 +139,6 @@ public class Main {
             return binary(n, value, mid, r);
         }
     }
+    */
 
 }
