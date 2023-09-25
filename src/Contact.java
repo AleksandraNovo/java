@@ -21,13 +21,7 @@ public record Contact(String name, String email) {
         }
         return true;
     }
-        //String domain = email.substring(email.indexOf("@"));
-        //return "@gmail.com".equals(domain);
-
-
     public void sayHello() {
         System.out.println("Hello, " + name + "!");
     }
-
-
 }
