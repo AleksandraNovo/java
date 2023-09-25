@@ -3,6 +3,18 @@ package src;
 public class Homework2 {
     public static void main(String[] args) {
         /*
+        Car car = new Car("Red", 500, "Toyota", 50);
+        car.info();
+        car.move();
+        car.info();
+        car.stopEngine();
+        car.refuel(200);
+        car.info();
+        car.startEngine();
+        car.info();
+
+         */
+        /*
         IntHolder IntHolderFirst = IntHolder.valueOf(4175);
         IntHolder IntHolderSecond = IntHolder.valueOf(5);
         System.out.println(IntHolderFirst.addition(IntHolderSecond));
@@ -24,13 +36,11 @@ public class Homework2 {
         System.out.println(p.giveY());
         System.out.println(p.moving(1, 1));
         System.out.println(p.changes(2));*/
-
-        Contact contact1 = new Contact("Alice", "alice@gmail.com");
-        contact1.sayHello();
-        Contact contact2 = new Contact("Bob");
-        contact2.sayHello();
-        System.out.println(contact1.EmailIsValid());
-
+        /*
+        Contact men1 = new Contact("Alice", "alice@gmail.com");
+        men1.sayHello();
+        //System.out.println(contact1.EmailIsValid(contact1.giveEmail()));
+        */
 
     }
     static boolean equals(String s, String t) {

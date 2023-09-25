@@ -1,12 +1,15 @@
 package src;
 
 public record Contact(String name, String email) {
-
+    //private string email = email;
     public Contact {
         if (name == null || email == null || name.isEmpty()) {
             throw new IllegalArgumentException("Error");
         }
     }
+    //public static int giveEmail() {
+    //    return email;
+    //}
     public Contact(String name) {
         this(name, "non@gmail.com");
     }

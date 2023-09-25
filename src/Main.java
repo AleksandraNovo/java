@@ -3,22 +3,7 @@ package src;
 import java.math.BigInteger;
 import java.util.Arrays;
 public class Main {
-    public static void main(String[] args) {
-        Car car = new Car("Red", 500, "Toyota", 50);
-        car.info();
 
-        car.move();
-        car.info();
-
-        car.stopEngine();
-        car.refuel(200);
-        car.info();
-
-        car.startEngine();
-        car.move();
-        car.info();
-
-    }
     /*
     public static void convert(int arg) {
         //if (arg >= 0) {
