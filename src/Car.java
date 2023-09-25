@@ -21,9 +21,9 @@ public class Car {
         private boolean RunOrNot;
         private final int consumption;
 
-        public Engine(int consumption) {
+        public Engine(int using) {
             this.RunOrNot = false;
-            this.consumption = consumption;
+            this.consumption = using;
         }
         public void refuel() {
             fuel = maxFuel;
@@ -44,10 +44,10 @@ public class Car {
         }
 
         public boolean move() {
-            if (RunOrNot) {
+            if (RunOrNot != false) {
                 if (fuel >= consumption) {
-                    fuel -= consumption;
                     mileage += 100;
+                    fuel -= consumption;
                     return true;
                 } else {
                     stop();
@@ -60,8 +60,11 @@ public class Car {
     }
 
     public void refuel(int liters) {
-        fuel = fuel + liters;
-        System.out.println("Added to car " + liters + " liters fuel");
+        if (fuel + liters < maxFuel){
+            System.out.println("Added to car " + liters + " liters fuel");
+        }else{
+            System.out.println("Maximum fuel in car");
+        }
     }
 
     public void info() {
