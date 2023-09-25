@@ -13,7 +13,7 @@ public class Car {
         this.maxFuel = maxFuel;
         this.model = model;
         this.engine = new Engine(consumption);
-        this.fuel = maxFuel; // предполагаем, что автомобиль поставляется с полным баком
+        this.fuel = maxFuel;
         this.mileage = 0;
     }
 

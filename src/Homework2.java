@@ -2,26 +2,36 @@ package src;
 
 public class Homework2 {
     public static void main(String[] args) {
-
-        IntHolder i1 = IntHolder.valueOf(4175);
-        IntHolder i2 = IntHolder.valueOf(5);
-
-        System.out.println(i1.addition(i2));
-        System.out.println(i1.subtraction(i2));
-        System.out.println(i1.multiplication(i2));
+        /*
+        IntHolder IntHolderFirst = IntHolder.valueOf(4175);
+        IntHolder IntHolderSecond = IntHolder.valueOf(5);
+        System.out.println(IntHolderFirst.addition(IntHolderSecond));
+        System.out.println(IntHolderFirst.subtraction(IntHolderSecond));
+        System.out.println(IntHolderFirst.multiplication(IntHolderSecond));
         //System.out.println(i1.division(i2));
-        System.out.println(i1.remainder(i2));
+        System.out.println(IntHolderFirst.percent(IntHolderSecond));
+        IntHolderFirst.swap(IntHolderSecond);
+        System.out.println(IntHolderFirst);
+        System.out.println(IntHolderSecond);
+        System.out.println(IntHolderFirst.equals(IntHolderSecond));
+        System.out.println(IntHolderFirst.hashCode());
+        System.out.println(IntHolderSecond.hashCode());*/
 
-        i1.swap(i2);
-        System.out.println(i1);
-        System.out.println(i2);
-        System.out.println(i1.equals(i2));
-        System.out.println(i2.hashCode());
-    /*
+        /*
         Point p = new Point(3, 4);
         System.out.println(p);
-        System.out.println(p.translate(1, 1));
-        System.out.println(p.scale(2));*/
+        System.out.println(p.giveX());
+        System.out.println(p.giveY());
+        System.out.println(p.moving(1, 1));
+        System.out.println(p.changes(2));*/
+
+        Contact contact1 = new Contact("Alice", "alice@gmail.com");
+        contact1.sayHello();
+        Contact contact2 = new Contact("Bob");
+        contact2.sayHello();
+        System.out.println(contact1.EmailIsValid());
+
+
     }
     static boolean equals(String s, String t) {
         // проверить, что строки совпадают без учета регистра

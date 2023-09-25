@@ -4,6 +4,9 @@ import java.util.Objects;
 
 public class IntHolder {
     private int value;
+    public String toString() {
+        return String.valueOf(value);
+    }
 
     public IntHolder(int valueIntHolder) {
         this.value = valueIntHolder;
@@ -13,7 +16,7 @@ public class IntHolder {
         return new IntHolder(valueIntHolder);
     }
 
-    // Методы для арифметических операций
+
     public IntHolder addition(IntHolder other) {
         return new IntHolder(this.value + other.value);
     }
@@ -21,17 +24,17 @@ public class IntHolder {
     public IntHolder subtraction(IntHolder other) {
         return new IntHolder(this.value - other.value);
     }
-    /*public IntHolder division(IntHolder other) {
+    public IntHolder division(IntHolder other) {
         if (other.value != 0) {
             return new IntHolder(this.value / other.value);
         }
-        return ("Error");
-    }*/
+        throw new IllegalArgumentException("Error");
+    }
     public IntHolder multiplication(IntHolder other) {
         return new IntHolder(this.value * other.value);
     }
 
-    public IntHolder remainder(IntHolder other) {
+    public IntHolder percent(IntHolder other) {
         return new IntHolder(this.value % other.value);
     }
 
@@ -40,11 +43,6 @@ public class IntHolder {
         this.value = i.value;
 
         i.value = swap1;
-    }
-
-
-    public String toString1() {
-        return String.valueOf(value);
     }
 
     public boolean equals(IntHolder other) {
@@ -59,5 +57,4 @@ public class IntHolder {
     public int hashCode() {
         return Objects.hash(value);
     }
-
 }
