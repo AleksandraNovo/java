@@ -2,18 +2,7 @@ package src;
 
 public class Homework2 {
     public static void main(String[] args) {
-        /*
-        Car car = new Car("Red", 500, "Toyota", 50);
-        car.info();
-        car.move();
-        car.info();
-        car.stopEngine();
-        car.refuel(200);
-        car.info();
-        car.startEngine();
-        car.info();
 
-         */
         /*
         IntHolder IntHolderFirst = IntHolder.valueOf(4175);
         IntHolder IntHolderSecond = IntHolder.valueOf(5);
