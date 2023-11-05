@@ -1,5 +1,3 @@
-package src;
-
 public final class Point {
     private final double x;
     private final double y;

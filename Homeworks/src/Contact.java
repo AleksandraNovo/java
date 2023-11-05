@@ -1,5 +1,3 @@
-package src;
-
 public record Contact(String name, String email) {
     //private string email = email;
     public Contact {
