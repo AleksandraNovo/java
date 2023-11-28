@@ -15,25 +15,25 @@ public class IntHolder {
     }
 
 
-    public IntHolder addition(IntHolder other) {
-        return new IntHolder(this.value + other.value);
+    public void IntHolder add(IntHolder other) {
+        this.value += other.value;
     }
 
-    public IntHolder subtraction(IntHolder other) {
-        return new IntHolder(this.value - other.value);
+    public void IntHolder subtraction(IntHolder other) {
+        this.value -= other.value;
     }
     public IntHolder division(IntHolder other) {
-        if (other.value != 0) {
-            return new IntHolder(this.value / other.value);
+        if (other.value == 0) {
+          throw new IllegalArgumentException("Делить на ноль нельзя!");
         }
-        throw new IllegalArgumentException("Error");
+        this.value = this.value / other.value;
     }
-    public IntHolder multiplication(IntHolder other) {
-        return new IntHolder(this.value * other.value);
+    public void IntHolder multiplication(IntHolder other) {
+        this.value = this.value * other.value;
     }
 
-    public IntHolder percent(IntHolder other) {
-        return new IntHolder(this.value % other.value);
+    public void IntHolder percent(IntHolder other) {
+        this.value = this.value % other.value);
     }
 
     public void swap(IntHolder i) {
