@@ -34,11 +34,7 @@ public class Homework2 {
         // проверить, что строки совпадают без учета регистра
         String sToDown = s.toLowerCase();
         String tToDown = t.toLowerCase();
-        if (sToDown.equals(tToDown)) {
-            return true;
-        } else {
-            return false;
-        }
+        return sToDown.equals(tToDown);
     }
     static String replace(String str, String oldStr, String newStr) {
         // в строке str все вхождения oldStr заменить на newStr
@@ -47,7 +43,8 @@ public class Homework2 {
 
     static String format(String surname, int mark, String subject) {
         // вернуть строку, используя форматирование: Студент [Фамилия] получил [оценка] по [предмету]
-        return ("Студент " + surname + " получил " + mark + " по " + subject);
+        String result = String.format("Студент", surname, "получил", mark, "по", subject);
+        return (result);
     }
 
     static boolean isPalindrome(String str) {
