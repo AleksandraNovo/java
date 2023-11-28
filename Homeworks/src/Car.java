@@ -58,7 +58,8 @@ public class Car {
     }
 
     public void refuel(int liters) {
-        if (fuel + liters < maxFuel){
+        if (this.fuel + liters < maxFuel){
+             this.fuel += liters;
             System.out.println("Added to car " + liters + " liters fuel");
         }else{
             System.out.println("Maximum fuel in car");
